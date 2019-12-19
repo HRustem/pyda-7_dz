@@ -1,0 +1,58 @@
+# Задание 1
+long_phrase = 'Насколько проще было бы писать программы, если бы не заказчики'
+short_phrase = '640Кб должно хватить для любых задач. Билл Гейтс (по легенде)'
+len('long_phrase') > len('short_phrase')
+
+# Задание 2
+nresult = int(input('Введите объем файла в байтах: ')) #224059719
+cons = 1024
+numerical_result = (nresult / cons) / cons
+print('Объем файла: ', round(numerical_result,2),'Mb')
+
+a = int(input('Введите объем файла в байтах: ')) #224059719
+print('Объем файла: ', round(a/1048576, 2), 'Mb')
+
+# Задание 3
+month = input('Введите месяц: ')
+date = int(input('Введите дату: '))
+
+if month=='Январь' and date>=20 or month=='Февраль' and date<=18:
+    print('Вывод: Водолей')
+elif month=='Февраль' and date>=19 or month=='Март' and date<=20:
+    print('Вывод: Рыбы')
+elif month=='Март' and date>=21 or month=='Апрель' and date<=19:
+    print('Вывод: Овен')
+elif month=='Апрель' and date>=20 or month=='Май' and date<=20:
+    print('Вывод: Телец')
+elif month=='Май' and date>=21 or month=='Июнь' and date<=21:
+    print('Вывод: Близнецы')
+elif month=='Июнь' and date>=22 or month=='Июль' and date<=22:
+    print('Вывод: Рак')
+elif month=='Июль' and date>=23 or month=='Август' and date<=22:
+    print('Вывод: Лев')
+elif month=='Август' and date>=23 or month=='Сентябрь' and date<=22:
+    print('Вывод: Дева')
+elif month=='Сентябрь' and date>=23 or month=='Октябрь' and date<=22:
+    print('Вывод: Весы')
+elif month=='Октябрь' and date>=23 or month=='Ноябрь' and date<=21:
+    print('Вывод: Скорпион')
+elif month=='Ноябрь' and date>=22 or month=='Декабрь' and date<=21:
+    print('Вывод: Стрелец')
+elif month=='Декабрь' and date>=22 or month=='Январь' and date<=19:
+    print('Вывод: Козерог')
+else:
+    print('Ошибка')
+print('Конец программы')
+
+# Задание 4
+zarplata = int(input('Введите заработанную плату в месяц: '))
+ipoteka = int(input('Введите сколько процентов уходит на ипотеку: '))
+existence = int(input('Введите сколько процентов уходит на жизнь: '))
+premia = int(input('Введите количество премий за год: '))
+year = 12
+ip = ((zarplata * ipoteka) / 100) * year
+jz = ((zarplata * existence) / 100) * year
+pr = (zarplata * premia) / 2 + ((zarplata * year) - (ip + jz))
+print('На ипотеку было потрачено: ', ip, 'рублей в год')
+print('На жизнь было потрачено: ', jz, 'рублей в год')
+print('Было накоплено: ', pr, 'рублей в год')
